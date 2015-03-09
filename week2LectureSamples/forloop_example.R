@@ -1,0 +1,29 @@
+## basic loop syntax
+for (x in 1:10) {
+  print(x)
+}
+
+string <- c("a","b","c","d")
+
+## loop by vector index
+for (x in 1:4) {
+  print(string[x])
+}
+
+## loop by vector sequence length calculated by seq_along()
+for (x in seq_along(string)) {
+  print(string[x])
+}
+
+## loop by vector members
+for (x in string) {
+  print(x)
+}
+
+## Inner and outer loops (nesting)
+grid <- matrix(1:12,3,4)
+for (row in seq_len(nrow(grid))) {
+    for (col in seq_len(ncol(grid))){
+      print(grid[row,col])
+    }
+}
