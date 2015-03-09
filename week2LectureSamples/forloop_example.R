@@ -3,6 +3,16 @@ for (x in 1:10) {
   print(x)
 }
 
+## "next" is a null function that lives within a condition and forces next iteration of loop.
+## The following will only print the numbers greater than 5 in a 10-step loop.
+
+for (count in 1:10) {
+  if (count < 5){
+    next
+  }
+  print(count)
+}
+
 string <- c("a","b","c","d")
 
 ## loop by vector index

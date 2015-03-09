@@ -5,6 +5,7 @@ while (x < 10) {
   x <- x + 1
 }
 
+
 ## Compound conditions
 ## Play a coin flip game. Walk away if I lose too much or wine too much to risk.
 ## I start with 5 bucks, and will walk if I lose more than half or win more than double.
