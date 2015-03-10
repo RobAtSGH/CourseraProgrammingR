@@ -14,7 +14,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     # Collapse the list into a single large dataframe
     airquality <- do.call(rbind,airquality)
 
-    ## Return the mean of the pollutant across all monitors list
-    ## in the 'id' vector (ignoring NA values)
-    signif(mean(airquality[,pollutant],na.rm=TRUE),digits=4)
+    ## Return the mean of the pollutant across all monitors listed
+    ## in the 'id' vector (ignoring NA values), to 4 significant digits.
+    round(mean(airquality[,pollutant],na.rm=TRUE),3)
 }

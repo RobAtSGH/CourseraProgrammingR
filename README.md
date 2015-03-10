@@ -7,3 +7,4 @@ Repository for Programming R classwork
 * 2015-03-09: Checked in week two lecture slides. Added spec data for week 2 programming project. Removed spaces from directory names. Created project stubs.
 * 2015-03-09: Created flow control examples for if-then-else, for loop, and while loop. Completed scoping and function examples.
 * 2015-03-10: Created pollutantmean() function for week 2 project. Submitted for grading - passed all tests.
+* 2015-03-10: Created complete() function for week 2 project. Submitted for grading - passed all tests.
