@@ -3,11 +3,13 @@ complete <- function(directory, id = 1:332) {
     # the location of the CSV files
     # 'id' is an integer vector indicating the monitor ID numbers
     # to be used
-    goodaq <- data.frame()
+    ids <- vector("numeric",0)
+    nnobs <- vector("numeric",0)
     files <- paste(directory,"/",formatC(id,width=3,format="d",flag="0"),".csv",sep="")
-    for (i in files) {
-        aq <- read.csv(i)
-        goodaq <- rbind(goodaq,c(aq$ID[1],nrow(aq[complete.cases(aq),])))
+    aqdata <- lapply(files,read.csv)
+    for (aqframe in aqdata) {
+        ids <- c(ids,aqframe[1,"ID"])
+        nnobs <- c(nnobs,nrow(aqframe[complete.cases(aqframe),]))
     }
     # Return a data frame of the form:
     # id nobs
@@ -16,6 +18,5 @@ complete <- function(directory, id = 1:332) {
     # ...
     # where 'id' is the monitor ID number and 'nobs' is the
     # number of complete cases
-    colnames(goodaq) <- c("id","nobs")
-    goodaq
+    cbind(id=ids,nobs=nnobs)
 }

@@ -8,3 +8,4 @@ Repository for Programming R classwork
 * 2015-03-09: Created flow control examples for if-then-else, for loop, and while loop. Completed scoping and function examples.
 * 2015-03-10: Created pollutantmean() function for week 2 project. Submitted for grading - passed all tests.
 * 2015-03-10: Created complete() function for week 2 project. Submitted for grading - passed all tests.
+* 2015-03-11: Created corr() function for week 2 project. Submitted for grading - passed all tests. Updated complete() function to use more elegant file opening and data frame testing loop.
