@@ -9,3 +9,5 @@ Repository for Programming R classwork
 * 2015-03-10: Created pollutantmean() function for week 2 project. Submitted for grading - passed all tests.
 * 2015-03-10: Created complete() function for week 2 project. Submitted for grading - passed all tests.
 * 2015-03-11: Created corr() function for week 2 project. Submitted for grading - passed all tests. Updated complete() function to use more elegant file opening and data frame testing loop.
+* 2015-03-18: Set up week 3. Added lecture slides
+* 2015-03-19: Example code for week 3 lectures.
