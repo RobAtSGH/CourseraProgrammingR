@@ -1,0 +1,172 @@
+> x <- 1
+> msg <- "Hello, world."
+> msg
+[1] "Hello, world."
+> x
+[1] 1
+> print(msg)
+[1] "Hello, world."
+> x <- 1:20
+> x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+> print(x)
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+> setwd("S:/CourseraProgrammingR")
+> attributes(x)
+NULL
+> attributes(msg)
+NULL
+> x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+> a <- c(1,2,3,4,5)
+> b <- c(2,4,6,8)
+> a
+[1] 1 2 3 4 5
+> b
+[1] 2 4 6 8
+> c <- c("a", TRUE)
+> c <- c(TRUE, 1.2)
+> rm(list=ls())
+> c <- 1:10
+> b <- as.character(c)
+> class(c)
+[1] "integer"
+> class(b)
+[1] "character"
+> as.logical(b)
+ [1] NA NA NA NA NA NA NA NA NA NA
+> as.complex(b)
+ [1]  1+0i  2+0i  3+0i  4+0i  5+0i  6+0i  7+0i  8+0i  9+0i 10+0i
+> a <- list("Hello", 3.4, FALSE)
+> a
+[[1]]
+[1] "Hello"
+
+[[2]]
+[1] 3.4
+
+[[3]]
+[1] FALSE
+
+> m <- matrix(2,3)
+> rm(m)
+> m <- matrix(nrow=2,ncol=3)
+> m
+     [,1] [,2] [,3]
+[1,]   NA   NA   NA
+[2,]   NA   NA   NA
+> dim(m)
+[1] 2 3
+> attributes(m)
+$dim
+[1] 2 3
+
+> m <- matrix(1:10, nrow=2, ncol=4)
+Warning message:
+In matrix(1:10, nrow = 2, ncol = 4) :
+  data length [10] is not a sub-multiple or multiple of the number of columns [4]
+> View(m)
+> m <- matrix(1:10, nrow=2, ncol=5)
+> m
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    3    5    7    9
+[2,]    2    4    6    8   10
+> m <- 1:10
+> dim(m)<-c(2,5)
+> m
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    3    5    7    9
+[2,]    2    4    6    8   10
+> x <- 1:4
+> y <- 5:8
+> z <- cbind(x,y)
+> z
+     x y
+[1,] 1 5
+[2,] 2 6
+[3,] 3 7
+[4,] 4 8
+> z <- rbind(x,y)
+> z
+  [,1] [,2] [,3] [,4]
+x    1    2    3    4
+y    5    6    7    8
+> rm(list=ls())
+> a <- factor(c("male","female","male","male","female"))
+> a
+[1] male   female male   male   female
+Levels: female male
+> unclass(a)
+[1] 2 1 2 2 1
+attr(,"levels")
+[1] "female" "male"  
+> table(a)
+a
+female   male 
+     2      3 
+> View(table(a))
+> a <- factor(c("male","female","male","male","female"),levels=c("male","female"))
+> a
+[1] male   female male   male   female
+Levels: male female
+> unclass(a)
+[1] 1 2 1 1 2
+attr(,"levels")
+[1] "male"   "female"
+> table(a)
+a
+  male female 
+     3      2 
+> b <- c(1,NaN,NA)
+> is.na(b)
+[1] FALSE  TRUE  TRUE
+> is.nan(b)
+[1] FALSE  TRUE FALSE
+> c <- data.frame(grade=c("A":"F"))
+Error in "A":"F" : NA/NaN argument
+In addition: Warning messages:
+1: In data.frame(grade = c("A":"F")) : NAs introduced by coercion
+2: In data.frame(grade = c("A":"F")) : NAs introduced by coercion
+> c <- data.frame(grade="A":"F")
+Error in "A":"F" : NA/NaN argument
+In addition: Warning messages:
+1: In data.frame(grade = "A":"F") : NAs introduced by coercion
+2: In data.frame(grade = "A":"F") : NAs introduced by coercion
+> c <- data.frame(grade=c("A","B","C","D","F"),minscore=c(95,85,75,65,0))
+> c
+  grade minscore
+1     A       95
+2     B       85
+3     C       75
+4     D       65
+5     F        0
+> nrow(c)
+[1] 5
+> ncol(c)
+[1] 2
+> attributes(c)
+$names
+[1] "grade"    "minscore"
+
+$row.names
+[1] 1 2 3 4 5
+
+$class
+[1] "data.frame"
+
+> d <- c(10,35,21)
+> names(d) <- c("Gold","Silver,"Bronze")
+Error: unexpected symbol in "names(d) <- c("Gold","Silver,"Bronze"
+> names(d) <- c("Gold","Silver,"Bronze")
+Error: unexpected symbol in "names(d) <- c("Gold","Silver,"Bronze"
+> names(d) <- c("Gold","Silver","Bronze")
+> d
+  Gold Silver Bronze 
+    10     35     21 
+> attributes(d)
+$names
+[1] "Gold"   "Silver" "Bronze"
+
+> names(d)
+[1] "Gold"   "Silver" "Bronze"
+> 
