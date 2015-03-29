@@ -12,4 +12,4 @@ Repository for Programming R classwork
 * 2015-03-18: Set up week 3. Added lecture slides
 * 2015-03-19: Example code for week 3 lectures.
 * 2015-03-24: Week 4 lecture slides. Cleaned up repository, sorted files into coursework weeks.
-
+* 2015-03-28: Completed programming assignment #3. Submitted for grading - passed all tests. Final cleanup and checkin for coursework.
